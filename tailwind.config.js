@@ -8,8 +8,7 @@ export default {
         xs: "480px",
       },
       colors: {
-        primary: "#FF7B07",
-        secundary: "#1E3465",
+        primary: "#FFA500",
       },
     },
 

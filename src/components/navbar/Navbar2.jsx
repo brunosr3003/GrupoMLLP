@@ -4,11 +4,9 @@ import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { FaCaretDown } from "react-icons/fa";
 import ResponsiveMenu from "./ResponsiveMenu";
 import Logo from "../../assets/LogoMultiluzSolar.png";
-import Img from "../../assets/Usina.png";
-
 const Navbar2 = () => {
   const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light",
   );
   const [showMenu, setShowMenu] = useState(false);
 
@@ -22,9 +20,11 @@ const Navbar2 = () => {
     if (theme === "dark") {
       element.classList.add("dark");
       localStorage.setItem("theme", "dark");
+      console.log("dark theme");
     } else {
       element.classList.remove("dark");
       localStorage.setItem("theme", "light");
+      console.log("light theme");
     }
   }, [theme]);
 
@@ -33,13 +33,13 @@ const Navbar2 = () => {
       <header
         data-aos="fade"
         data-aos-duration="300"
-        className="relative z-[99] border-b-[1px] border-primary/50 bg-gradient-to-l from-blue-950 via-blue-800 to-blue-950 text-white shadow-lg transition-colors duration-500"
+        className="relative z-[99] border-b-[1px]  border-primary/50 bg-gradient-to-l from-blue-900 via-blue-800 to-blue-900 text-white shadow-lg"
       >
-        <nav className="container flex h-[70px] items-center justify-between py-2">
-          <div className="text-2xl text-white md:text-3xl">
-            <a href="/#home">
+        <nav className="container  flex h-[70px] items-center justify-between py-2 ">
+          <div className="text-2xl text-white md:text-3xl ">
+            <a href="/#home" className="">
               <img
-                className="max-h-[50px] w-full object-fill"
+                className="max-h-[50px] w-full  object-fill"
                 src={Logo}
                 alt="pics"
               />
@@ -49,13 +49,16 @@ const Navbar2 = () => {
           <div className="hidden md:block">
             <ul className="flex items-center gap-10">
               <li className="group relative cursor-pointer">
-                <a href="/#home" className="flex h-[72px] items-center gap-[2px]">
+                <a
+                  href="/#home"
+                  className="flex h-[72px] items-center gap-[2px]"
+                >
                   Home{" "}
                   <span>
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
                   </span>
                 </a>
-                <div className="absolute -left-9 z-[9999] hidden w-[150px] rounded-md bg-white p-2 text-black group-hover:block">
+                <div className="absolute -left-9 z-[9999] hidden w-[150px] rounded-md bg-white p-2 text-black group-hover:block  ">
                   <ul className="space-y-3">
                     <li className="p-2 hover:bg-violet-200">Serviços</li>
                     <li className="p-2 hover:bg-violet-200">Sobre nós</li>
@@ -63,58 +66,57 @@ const Navbar2 = () => {
                   </ul>
                 </div>
               </li>
-              <li className="group cursor-pointer">
-                <a href="/#home" className="flex h-[72px] items-center gap-[2px]">
+              <li className="cursor pointer group">
+                <a
+                  href="/#home"
+                  className="flex h-[72px] items-center gap-[2px]"
+                >
                   Serviços{" "}
                   <span>
                     <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
                   </span>
                 </a>
-                <div className="absolute left-0 z-[9999] hidden w-full rounded-b-3xl bg-white p-2 text-black group-hover:block">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="absolute left-0 z-[9999] hidden w-full rounded-b-3xl bg-white p-2 text-black group-hover:block  ">
+                  <div className="grid grid-cols-3 gap-5 ">
                     <div className="d-200 overflow-hidden">
                       <img
-                        src={Img}
-                        alt="No image"
-                        className="mx-auto h-[200px] w-full object-cover transition duration-700 hover:skew-x-2 hover:scale-100 rounded-md"
+                        className="max-h-[300px] w-full rounded-b-3xl object-fill"
+                        src="https://picsum.photos/200"
+                        alt="pics"
                       />
                     </div>
                     <div className="col-span-2">
                       <h1 className="pb-3 text-xl font-semibold">
-                        Nossos serviços
+                          Nossos serviços
                       </h1>
                       <p className="text-sm text-slate-600">
-                        Sinônimo de excelência e comprometimento. Confira
-                        alguns de nossos serviços:
+                      sinônimo de excelência e comprometimento. 
+                      Confira alguns de nossos serviços:
                       </p>
-                      <div className="grid grid-cols-1 md:grid-cols-3">
+                      <div className="grid grid-cols-3 ">
                         <ul className="mt-3 flex flex-col gap-2">
                           <h1 className="pb-1 text-xl font-semibold">
-                            Avaliação energética
+                          Avaliação energética
                           </h1>
                           <li className="cursor-pointer text-black/80 hover:text-primary">
-                            Realizamos um estudo analítico para garantir a
-                            viabilidade do projeto e sua melhor performance em
-                            geração, seja para sua casa ou empresa.
+                          Realizamos um estudo analítico para garantir a viabilidade do projeto e sua melhor performance em geração, seja para sua casa ou empresa.
                           </li>
+                          
                         </ul>
                         <ul className="mt-3 flex flex-col gap-2">
                           <h1 className="pb-1 text-xl font-semibold">
-                            Instalação
+                          Instalação 
                           </h1>
                           <li className="cursor-pointer text-black/80 hover:text-primary">
-                            Com uma equipe de engenharia especializada, cuidamos
-                            de toda a obra, desde homologação do projeto até a
-                            sua instalação e geração.
-                          </li>
+                          Com uma equipe de engenharia especializada, cuidamos de toda a obra, desde homologação do projeto até a sua instalação e geração.</li>
                         </ul>
+                        
                         <ul className="mt-3 flex flex-col gap-2">
                           <h1 className="pb-1 text-xl font-semibold">
-                            Manutenção
+                          Manutenção
                           </h1>
                           <li className="cursor-pointer text-black/80 hover:text-primary">
-                            O seu sistema é monitorado por uma plataforma que
-                            indica qualquer problema ou necessidade de reparos.
+                          O seu sistema é monitorado por uma plataforma que indica qualquer problema ou necessidade de reparos.
                           </li>
                         </ul>
                       </div>
@@ -122,19 +124,13 @@ const Navbar2 = () => {
                   </div>
                 </div>
               </li>
-              <li className="cursor-pointer">
+              <li className="cursor pointer">
                 <a href="/#contact">Sobre nós</a>
               </li>
               {/* Phone number section */}
               <div className="flex items-center gap-4">
                 <li>
-                  <a
-                    href="https://api.whatsapp.com/send/?phone=553136173862&text=Oi%21+Vi+o+perfil+no+Insta+e+gostaria+de+saber+mais+sobre+energia+solar&type=phone_number&app_absent=0"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <BiPhoneCall className="h-[40px] w-[40px] rounded-md bg-primary p-2 text-2xl text-white hover:bg-primary/90" />
-                  </a>
+                  <BiPhoneCall className="h-[40px] w-[40px] rounded-md bg-primary p-2 text-2xl text-white hover:bg-primary/90" />
                 </li>
                 <li>
                   <div>
@@ -150,34 +146,34 @@ const Navbar2 = () => {
               {theme === "dark" ? (
                 <BiSolidSun
                   onClick={() => setTheme("light")}
-                  className="text-2xl transition-colors duration-300"
+                  className="text-2xl"
                 />
               ) : (
                 <BiSolidMoon
                   onClick={() => setTheme("dark")}
-                  className="text-2xl transition-colors duration-300"
+                  className="text-2xl"
                 />
               )}
             </ul>
           </div>
 
           {/* Mobile view  */}
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-4 md:hidden ">
             {theme === "dark" ? (
               <BiSolidSun
                 onClick={() => setTheme("light")}
-                className="text-2xl transition-colors duration-300"
+                className="text-2xl"
               />
             ) : (
               <BiSolidMoon
                 onClick={() => setTheme("dark")}
-                className="text-2xl transition-colors duration-300"
+                className="text-2xl"
               />
             )}
             {showMenu ? (
               <HiMenuAlt1
                 onClick={toggleMenu}
-                className="cursor-pointer transition-all"
+                className=" cursor-pointer transition-all"
                 size={30}
               />
             ) : (

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Img1 from "../../assets/geraldo.jpg";
-import Img2 from "../../assets/blog2.png";
+import Img2 from "../../assets/blog2.jpeg";
 import Img3 from "../../assets/grupo.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -33,7 +33,7 @@ const Blogs = () => {
               Honestidade
               </h1>
               <p className="line-clamp-2">
-              Nós entendemos a necessidade de cada cliente e solucionamos de maneira especializada.
+              Nós entendemos a necessidade de cada cliente e solucionamos de maneira especializada, entregando nosso melhor com comprometimento e responsabilidade.
               </p>
             </div>
           </div>
@@ -57,7 +57,7 @@ const Blogs = () => {
               Credibilidade
               </h1>
               <p className="line-clamp-2">
-              Com mais de 2.000 projetos realizados, somos reconhecidos por entregar a melhor solução.
+              Com mais de 1.200 projetos realizados, somos reconhecidos por entregar a melhor solução em energia solar levando sempre muita economia e satisfação.
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@ const Blogs = () => {
               Tradição
               </h1>
               <p className="line-clamp-2">
-              Com mais de 30 anos no mercado, a Multiluz Solar carrega tradição e profissionalismo.
+              Com mais de 30 anos no mercado, a Multiluz Solar carrega a tradição e profissionalismo de entregar sempre o melhor serviço a seus clientes.
               </p>
             </div>
           </div>
